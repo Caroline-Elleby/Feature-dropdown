@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+}
+
+
+
+body{
+
+    background-image: url(images/menu-baggrund.jpg);
+    background-size: contain;
+    
+}
+
+#overlay{ /*Sort baggrundsfarve/overlay med 0.5 transperens*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 0;
+    top: 0;
+       
+}
+
+h1, h2, h4, p{
+    font-family: 'roboto', sans-serif;
+}
+
+
+
+
+/*--------------------------------DROPDOWN FEATURE-------------------------------*/
+
+
+.dropdown{
+    position: relative;
+    z-index: 2;
+}
+
+
+.dropdown h1{
+    margin-top: 10%;
+    margin-bottom: 4%;
+    text-align: center;
+    color: white;
+    font-family: 'roboto', sans-serif;
+}
+
+.dropdown h4{
+    font-family: 'roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 5%;
+}
+
+.dropdown h4 p{
+    margin-bottom: 3%;
+    font-size: 0.8rem;
+
+}
+
+.drikindhold, .olindhold, .menuindhold,.julindhold{
+  color: white;
+  display: none;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.drik{
+    width: 50%;
+    margin: 5% auto;
+    line-height: 2rem;
+    
+}  
+
+                                            
+.linje {
+    display: flex;
+    align-items: baseline;
+}
+.navn{
+    font-size: 1.3rem;
+}
+
+.lilletekst{
+    font-size: 0.9rem;
+}
+
+.dots {
+    flex: 1;                                
+    border-bottom: 2px dotted #bba14f;
+    margin: 0 8px;
+}
+                                            
+
+.drik h2{
+    font-family: 'roboto', sans-serif;
+    padding-bottom: 5%;
+}
+
+.drikindhold.show, .olindhold.show, .menuindhold.show, .julindhold.show{
+  display: flex;
+}
+
+button{
+  border-top: #bba14f solid 2px;
+  border-bottom: #bba14f solid 2px;
+  width: 40%;
+  margin: auto;
+  padding: 1%;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2%;
+  display: flex;
+  gap: 4%;
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+  cursor: pointer;
+
+  /*Generelle regler for <button> i HTML*/
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .dropdown h1{
+        margin-top: 30%;
+    }
+
+    .dropbtn{
+        width: 80%;
+        margin: 5% auto;
+
+    }
+
+    .drikindhold, .olindhold, .menuindhold, .julindhold{
+        display: none;
+    }
+
+    .drik{
+        margin-bottom: 10%;
+        width: 100%;
+        margin: 10% auto;
+    }
+
+    .drikindhold.show, .olindhold.show, .menuindhold.show,.julindhold.show {
+        display: block;
+    }
+
+}
+
