@@ -4,14 +4,7 @@
 
 
 
-body{
-
-    background-image: url(images/menu-baggrund.jpg);
-    background-size: contain;
-    
-}
-
-#overlay{ /*Sort baggrundsfarve/overlay med 0.5 transperens*/
+#overlay{ /*Sort baggrundsfarve/overlay med 0.5 transperens - Fungerer over billedet i rigtig kodning*/
     position: fixed;
     width: 100%;
     height: 100%;
@@ -30,23 +23,20 @@ h1, h2, h4, p{
 
 /*--------------------------------DROPDOWN FEATURE-------------------------------*/
 
-
 .dropdown{
     position: relative;
     z-index: 2;
+    margin-top: 10%;
 }
 
 
 .dropdown h1{
-    margin-top: 10%;
     margin-bottom: 4%;
     text-align: center;
     color: white;
-    font-family: 'roboto', sans-serif;
 }
 
 .dropdown h4{
-    font-family: 'roboto', sans-serif;
     font-size: 1.5rem;
     margin-top: 5%;
 }
@@ -64,13 +54,14 @@ h1, h2, h4, p{
   margin: auto;
   justify-content: space-between;
   gap: 5%;
+  flex-wrap: wrap;
 }
 
 .drik{
+    flex: 1 1 45%;
     width: 50%;
-    margin: 5% auto;
     line-height: 2rem;
-    
+    padding-bottom: 5%;
 }  
 
                                             
@@ -78,6 +69,7 @@ h1, h2, h4, p{
     display: flex;
     align-items: baseline;
 }
+
 .navn{
     font-size: 1.3rem;
 }
@@ -95,11 +87,12 @@ h1, h2, h4, p{
 
 .drik h2{
     font-family: 'roboto', sans-serif;
-    padding-bottom: 5%;
+    margin: 5% 0;
 }
 
 .drikindhold.show, .olindhold.show, .menuindhold.show, .julindhold.show{
   display: flex;
+  
 }
 
 button{
@@ -107,7 +100,7 @@ button{
   border-bottom: #bba14f solid 2px;
   width: 40%;
   margin: auto;
-  padding: 1%;
+  padding: 1% 0% 0.5% 0%;
   text-align: center;
   justify-content: center;
   margin-bottom: 2%;
@@ -123,6 +116,17 @@ button{
   border-left: none;
   border-right: none;
 }
+
+
+/*Pil transition*/
+.dropbtn img{
+  transition: transform 0.3s ease;
+}
+
+.dropbtn.active img {
+  transform: rotate(180deg);
+}
+
 
 @media screen and (max-width: 600px) {
 
@@ -151,4 +155,3 @@ button{
     }
 
 }
-
